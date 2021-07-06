@@ -1,0 +1,38 @@
+.rulesCard {
+    background-color: #fff;
+    border-radius: 25px;
+    width: 410px;
+    height: 410px;
+    position: fixed;
+    margin-top: -200px;
+    margin-left: -200px;
+    top: 50%;
+    left: 50%;
+}
+
+.titleAndCloseButton {
+    display: flex;
+}
+
+.rulesTitle {
+    color: hsl(229, 25%, 31%);
+    margin: 10px 0 5px 20px;
+}
+
+.closeButton {
+    background-image: url('../images/icon-close.svg');
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 15px 5px 0 230px;
+}
+
+.rulesImage {
+    height: 325px;
+    margin: 12px 0 0 22px;
+}
