@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Heading from './Heading';
-import logo from '../images/logo.svg';
+import logo from '../images/logo-bonus.svg';
 import './rockpaperscissors.css';
 import PlayersChoice from './PlayersChoice';
 import RulesButton from './RulesButton';
