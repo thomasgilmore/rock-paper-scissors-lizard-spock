@@ -1,6 +1,6 @@
 import React from 'react';
 import './rules.css';
-import rulesImage from '../images/image-rules.svg';
+import rulesImage from '../images/image-rules-bonus.svg';
 
 export default function Rules(props) {
     return (

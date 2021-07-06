@@ -1,11 +1,11 @@
 .rulesCard {
     background-color: #fff;
     border-radius: 25px;
-    width: 410px;
-    height: 410px;
+    width: 480px;
+    height: 525px;
     position: fixed;
-    margin-top: -200px;
-    margin-left: -200px;
+    margin-top: -262.5px;
+    margin-left: -240px;
     top: 50%;
     left: 50%;
 }
@@ -16,7 +16,7 @@
 
 .rulesTitle {
     color: hsl(229, 25%, 31%);
-    margin: 10px 0 5px 20px;
+    margin: 10px 0 2.5px 20px;
 }
 
 .closeButton {
@@ -29,10 +29,10 @@
     cursor: pointer;
     width: 30px;
     height: 30px;
-    margin: 15px 5px 0 230px;
+    margin: 15px 5px 0 315px;
 }
 
 .rulesImage {
-    height: 325px;
-    margin: 12px 0 0 22px;
+    height: 450px;
+    margin: 12px 0 0 10px;
 }
