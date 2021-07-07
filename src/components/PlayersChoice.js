@@ -1,12 +1,12 @@
 import React from 'react';
 import './playerschoice.css';
-import backgroundTriangle from '../images/bg-triangle.svg';
+import backgroundPentagon from '../images/bg-pentagon.svg';
 
 export default function PlayersChoice(props) {
     return (
         <div>
-        <div className="backgroundTriangle">
-        <img src={backgroundTriangle} className="backgroundTriangle" alt="backgroundTriangle" />
+        <div className="backgroundPentagon">
+        <img src={backgroundPentagon} className="backgroundPentagon" alt="backgroundPentagon" />
         </div>
         <div className="playersChoiceDiv">
             <div className="paperButtonBorder" onClick={props.paperButtonChoiceClick}><button className="paperButton"></button></div>
