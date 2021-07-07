@@ -1,10 +1,10 @@
-import RockPaperScissors from "./components/RockPaperScissors";
+import RockPaperScissorsLizardSpock from "./components/RockPaperScissorsLizardSpock";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <RockPaperScissors />
+      <RockPaperScissorsLizardSpock />
     </div>
   );
 }

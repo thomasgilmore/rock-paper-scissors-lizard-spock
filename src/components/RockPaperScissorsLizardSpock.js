@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Heading from './Heading';
 import logo from '../images/logo-bonus.svg';
-import './rockpaperscissors.css';
+import './rockpaperscissorslizardspock.css';
 import PlayersChoice from './PlayersChoice';
 import RulesButton from './RulesButton';
 import Rules from './Rules';
 import Winner from './Winner';
 
-export default class RockPaperScissors extends Component {
+export default class RockPaperScissorsLizardSpock extends Component {
     constructor(props) {
         super(props);
         this.state = {
