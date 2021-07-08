@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Rock, Paper, Scissors, Lizard, Spock Game
+
+Frontend Mentor Rock, Paper, Scissors, Lizard, Spock Game Challenge
+
+[https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
+
+**LIVE LINK**: [https://gilmore-rock-paper-scissors-lizard-spock.netlify.app/](https://gilmore-rock-paper-scissors-lizard-spock.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
