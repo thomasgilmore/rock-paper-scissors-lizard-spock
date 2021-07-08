@@ -27,6 +27,8 @@ export default class RockPaperScissorsLizardSpock extends Component {
         this.rockButtonChoiceClick = this.rockButtonChoiceClick.bind(this);
         this.paperButtonChoiceClick = this.paperButtonChoiceClick.bind(this);
         this.scissorsButtonChoiceClick = this.scissorsButtonChoiceClick.bind(this);
+        this.lizardButtonChoiceClick = this.lizardButtonChoiceClick.bind(this);
+        this.spockButtonChoiceClick = this.spockButtonChoiceClick.bind(this);
         this.playAgain = this.playAgain.bind(this);
     }
 
@@ -39,13 +41,17 @@ export default class RockPaperScissorsLizardSpock extends Component {
     }
 
     computersChoice() {
-        let randomNumber = Math.floor(Math.random() * 3) + 1;
+        let randomNumber = Math.floor(Math.random() * 5) + 1;
         if (randomNumber === 1) {
             return 'rock';
         } else if (randomNumber === 2) {
             return 'paper';
-        } else {
+        } else if (randomNumber === 3) {
             return 'scissors';
+        } else if (randomNumber === 4) {
+            return 'lizard';
+        } else {
+            return 'spock';
         }
     }
 
@@ -60,9 +66,15 @@ export default class RockPaperScissorsLizardSpock extends Component {
             } else if (computersChoice === "paper") {
                 score -= 1;
                 computerIsWinner = true;
-            }  else if (computersChoice === "scissors") {
+            } else if (computersChoice === "scissors") {
                 score += 1;
                 playerIsWinner = true;
+            } else if (computersChoice === "lizard") {
+                score += 1;
+                playerIsWinner = true;
+            } else if (computersChoice === "spock") {
+                score -= 1;
+                computerIsWinner = true;
             }
         } else if (playersChoice === "paper") {
             if (computersChoice === "rock") {
@@ -70,9 +82,15 @@ export default class RockPaperScissorsLizardSpock extends Component {
                 playerIsWinner = true;
             } else if (computersChoice === "paper") {
                 isTie = true;
-            }  else if (computersChoice === "scissors") {
+            } else if (computersChoice === "scissors") {
                 score -= 1;
                 computerIsWinner = true;
+            } else if (computersChoice === "lizard") {
+                score -= 1;
+                computerIsWinner = true;
+            } else if (computersChoice === "spock") {
+                score += 1;
+                playerIsWinner = true;
             }
         } else if (playersChoice === "scissors") {
             if (computersChoice === "rock") {
@@ -81,7 +99,45 @@ export default class RockPaperScissorsLizardSpock extends Component {
             } else if (computersChoice === "paper") {
                 score += 1;
                 playerIsWinner = true;
-            }  else if (computersChoice === "scissors") {
+            } else if (computersChoice === "scissors") {
+                isTie = true;
+            } else if (computersChoice === "lizard") {
+                score += 1;
+                playerIsWinner = true;
+            } else if (computersChoice === "spock") {
+                score -= 1;
+                computerIsWinner = true;
+            }
+        } else if (playersChoice === "lizard") {
+            if (computersChoice === "rock") {
+                score -= 1;
+                computerIsWinner = true;
+            } else if (computersChoice === "paper") {
+                score += 1;
+                playerIsWinner = true;
+            } else if (computersChoice === "scissors") {
+                score -= 1;
+                computerIsWinner = true;
+            } else if (computersChoice === "lizard") {
+                isTie = true;
+            } else if (computersChoice === "spock") {
+                score += 1;
+                playerIsWinner = true;
+            }
+        } else if (playersChoice === "spock") {
+            if (computersChoice === "rock") {
+                score += 1;
+                playerIsWinner = true;
+            } else if (computersChoice === "paper") {
+                score -= 1;
+                computerIsWinner = true;
+            } else if (computersChoice === "scissors") {
+                score += 1;
+                playerIsWinner = true;
+            } else if (computersChoice === "lizard") {
+                score -= 1;
+                computerIsWinner = true;
+            } else if (computersChoice === "spock") {
                 isTie = true;
             }
         }
@@ -109,6 +165,20 @@ export default class RockPaperScissorsLizardSpock extends Component {
         this.setState({ playersChoice, playerChose: true, computersChoice});
     }
 
+    lizardButtonChoiceClick() {
+        let playersChoice = 'lizard';
+        let computersChoice = this.computersChoice();
+        this.winner(playersChoice, computersChoice);
+        this.setState({ playersChoice, playerChose: true, computersChoice });
+    }
+
+    spockButtonChoiceClick() {
+        let playersChoice = 'spock';
+        let computersChoice = this.computersChoice();
+        this.winner(playersChoice, computersChoice);
+        this.setState({ playersChoice, playerChose: true, computersChoice});
+    }
+
     playAgain() {
         console.log("working");
         this.setState({ playerChose: false, playerIsWinner: false, computerIsWinner: false, isTie: false });
@@ -127,7 +197,9 @@ export default class RockPaperScissorsLizardSpock extends Component {
                     : 
                     <PlayersChoice rockButtonChoiceClick={this.rockButtonChoiceClick}
                     paperButtonChoiceClick={this.paperButtonChoiceClick}
-                    scissorsButtonChoiceClick={this.scissorsButtonChoiceClick} />
+                    scissorsButtonChoiceClick={this.scissorsButtonChoiceClick}
+                    lizardButtonChoiceClick={this.lizardButtonChoiceClick}
+                    spockButtonChoiceClick={this.spockButtonChoiceClick} />
                 }
                 <RulesButton rulesButtonClick={this.rulesButtonClick} />
                 {this.state.rulesOpen ? <Rules closeButtonClick={this.closeButtonClick} /> : null}
