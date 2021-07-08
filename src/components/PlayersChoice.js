@@ -12,8 +12,8 @@ export default function PlayersChoice(props) {
             <div className="paperButtonBorder" onClick={props.paperButtonChoiceClick}><button className="paperButton"></button></div>
             <div className="rockButtonBorder" onClick={props.rockButtonChoiceClick}><button className="rockButton"></button></div>
             <div className="scissorButtonBorder" onClick={props.scissorsButtonChoiceClick}><button className="scissorButton"></button></div>
-            <div className="lizardButtonBorder" onClick={props.rockButtonChoiceClick}><button className="lizardButton"></button></div>
-            <div className="spockButtonBorder" onClick={props.scissorsButtonChoiceClick}><button className="spockButton"></button></div>
+            <div className="lizardButtonBorder" onClick={props.lizardButtonChoiceClick}><button className="lizardButton"></button></div>
+            <div className="spockButtonBorder" onClick={props.spockButtonChoiceClick}><button className="spockButton"></button></div>
         </div>
         </div>
     )
